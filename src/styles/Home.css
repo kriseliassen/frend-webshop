@@ -1,0 +1,22 @@
+.categories {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.category--card {
+	width: 300px;
+	height: 400px;
+	position: relative;
+}
+
+.category--image {
+	width: 300px;
+	height: 400px;
+	object-fit: cover;
+}
+
+.category--title {
+	position: absolute;
+	color: white;
+	bottom: 0;
+}
