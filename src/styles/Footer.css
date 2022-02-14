@@ -1,0 +1,15 @@
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em 2rem;
+	background-color: hsl(var(--clr-light));
+}
+
+.nav__footer {
+	font-size: var(--fs-200);
+	gap: 4em;
+}
