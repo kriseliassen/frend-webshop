@@ -18,3 +18,8 @@
 .btn:hover {
 	cursor: pointer;
 }
+
+.heading {
+	text-align: center;
+	margin: 0.5em 0;
+}

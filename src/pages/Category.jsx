@@ -34,7 +34,7 @@ const Category = () => {
 			)}
 			{data && (
 				<>
-					<h1>{name}</h1>
+					<h1 className="heading">{name}</h1>
 					<div className="products">
 						{getProductsInCategory(data).map((item) => (
 							<ProductCard key={item.id} product={item} />

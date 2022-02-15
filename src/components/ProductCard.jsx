@@ -12,7 +12,7 @@ const ProductCard = ({ product }) => {
 				<h2>{product.name}</h2>
 			</Link>
 			{product.variants.length > 1 && <p>{product.variants.length} colors</p>}
-			<p>{product.price.toFixed(2)} NOK</p>
+			<p>{product.price} NOK</p>
 		</div>
 	);
 };

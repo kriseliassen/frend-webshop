@@ -11,21 +11,39 @@ import { useState } from "react";
 const App = () => {
 	const [cartContent, setCartContent] = useState([]);
 
+	const itemsInCart = cartContent.reduce((acc, item) => acc + item.quantity, 0);
+
 	const addToCart = (product) => {
-		console.log("added to cart", product);
-		setCartContent((cartContent) => [...cartContent, product]);
+		setCartContent((prev) => {
+			const isItemInCart = prev.find(
+				(item) => item.variant.id === product.variant.id
+			);
+
+			if (isItemInCart) {
+				return prev.map((item) =>
+					item.variant.id === product.variant.id
+						? { ...item, quantity: item.quantity + 1 }
+						: item
+				);
+			}
+			return [...prev, { ...product, quantity: 1 }];
+		});
 	};
 
 	return (
 		<Router>
 			<div className="App">
-				<Navbar cartItems={cartContent.length} />
+				<Navbar itemsInCart={itemsInCart} />
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route
 						path="/cart"
 						element={
-							<Cart cartContent={cartContent} setCartContent={setCartContent} />
+							<Cart
+								cartContent={cartContent}
+								setCartContent={setCartContent}
+								itemsInCart={itemsInCart}
+							/>
 						}
 					/>
 					<Route path="/category/:name" element={<Category />} />

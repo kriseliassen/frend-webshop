@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AiFillShopping } from "react-icons/ai";
 import "../styles/Navbar.css";
 
-const Navbar = ({ cartItems }) => {
+const Navbar = ({ itemsInCart }) => {
 	const navigate = useNavigate();
 
 	return (
@@ -35,7 +35,7 @@ const Navbar = ({ cartItems }) => {
 					<li className="nav__item nav__item--cart">
 						<Link to="/cart">
 							<AiFillShopping />
-							<span className="nav__item--badge">{cartItems}</span>
+							<span className="nav__item--badge">{itemsInCart}</span>
 						</Link>
 					</li>
 				</ul>

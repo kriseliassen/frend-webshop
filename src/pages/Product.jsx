@@ -44,7 +44,7 @@ const Product = ({ addToCart }) => {
 					</div>
 					<div>
 						<h1>{data.name}</h1>
-						<p>{data.price.toFixed(2)} NOK</p>
+						<p>{data.price} NOK</p>
 						<p>{selectedVariant.name}</p>
 						{data.variants.length > 1 && (
 							<div>
@@ -70,10 +70,10 @@ const Product = ({ addToCart }) => {
 									id: data.id,
 									name: data.name,
 									price: data.price,
-									quantity: 1,
 									variant: {
 										id: selectedVariant.id,
 										name: selectedVariant.name,
+										image: selectedVariant.image,
 									},
 								})
 							}
