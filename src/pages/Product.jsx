@@ -70,6 +70,7 @@ const Product = ({ addToCart }) => {
 									id: data.id,
 									name: data.name,
 									price: data.price,
+									quantity: 1,
 									variant: {
 										id: selectedVariant.id,
 										name: selectedVariant.name,
