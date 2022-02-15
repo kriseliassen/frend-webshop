@@ -1,14 +1,10 @@
 import "../styles/Cart.css";
 
-const Cart = ({ cartContent, setCartContent, itemsInCart }) => {
+const Cart = ({ cartContent, removeFromCart, itemsInCart }) => {
 	const totalSum = cartContent.reduce(
 		(acc, item) => acc + item.quantity * item.price,
 		0
 	);
-
-	const removeFromCart = (id) => {
-		console.log("removed!");
-	};
 
 	return (
 		<div className="container">
@@ -24,7 +20,7 @@ const Cart = ({ cartContent, setCartContent, itemsInCart }) => {
 									className="Cart__image"
 								/>
 								<div className="Cart__product--details">
-									<p>{item.name}</p>
+									<h3 className="title">{item.name}</h3>
 									<p>Color - {item.variant.name}</p>
 									<p className="">{item.price} NOK</p>
 									<p className="">Quantity - {item.quantity}</p>
@@ -40,9 +36,14 @@ const Cart = ({ cartContent, setCartContent, itemsInCart }) => {
 								</button>
 							</div>
 						))}
+					{cartContent.length === 0 && (
+						<div className="message--box">
+							<p className="message--text">Your cart is empty.</p>
+						</div>
+					)}
 				</div>
 				<div className="Cart__summary">
-					<h2 className="heading">Cart total</h2>
+					<h2 className="subheading">Cart total</h2>
 					<p>You have {itemsInCart} items in your cart</p>
 					<p className="Cart__total">
 						<span>TOTAL</span>

@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "react-query";
 import { getCategories, getProducts } from "../api";
 import ProductCard from "../components/ProductCard";
+import "../styles/Category.css";
 
 const Category = () => {
 	const { name } = useParams();

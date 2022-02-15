@@ -15,7 +15,7 @@ const ImageCard = ({ name }) => {
 					}
 					alt={name}
 				/>
-				<span className="ImageCard__title">{name}</span>
+				<span className="ImageCard__title title">{name}</span>
 			</Link>
 		</div>
 	);

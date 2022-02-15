@@ -3,6 +3,7 @@
 	width: 100vw;
 	position: relative;
 	left: -4rem;
+	background: black;
 }
 
 .hero__image {
@@ -10,9 +11,13 @@
 	width: 100%;
 	background-position: center;
 	object-fit: cover;
+	opacity: 0.8;
 }
 
-.hero__button {
+.hero__text {
+	color: white;
+	font-size: var(--fs-700);
+	font-weight: 600;
 	position: absolute;
 	top: 50%;
 	left: 50%;

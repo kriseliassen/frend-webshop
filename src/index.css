@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 /* ------------------------ */
 /* Custom properties        */
 /* ------------------------ */
@@ -16,9 +19,8 @@
 	--fs-300: 1rem;
 	--fs-200: 0.875rem;
 
-	--ff-serif: "Bellefair", serif;
-	--ff-sans-cond: "Barlow Condensed", sans-serif;
-	--ff-sans-normal: "Barlow", sans-serif;
+	--ff-sans-normal: "Poppins", sans-serif;
+	--ff-display: "Syne", sans-serif;
 }
 
 /* ------------------------ */
@@ -59,10 +61,11 @@ input,
 button,
 textarea,
 select {
-	font: inherit;
+	font-family: var(--ff-display);
 }
 
 a {
 	text-decoration: none;
 	color: inherit;
+	font-family: var(--ff-display);
 }

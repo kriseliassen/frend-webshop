@@ -35,34 +35,39 @@ const Product = ({ addToCart }) => {
 				)
 			)}
 			{selectedVariant && (
-				<>
-					<div>
-						<img
-							src={selectedVariant.image}
-							alt={data.name + selectedVariant.name}
-						/>
-					</div>
-					<div>
-						<h1>{data.name}</h1>
+				<div className="Product__content">
+					<img
+						src={selectedVariant.image}
+						alt={data.name + selectedVariant.name}
+						className="Product__img"
+					/>
+					<div className="Product__info">
+						<h1 className="title">{data.name}</h1>
 						<p>{data.price} NOK</p>
-						<p>{selectedVariant.name}</p>
-						{data.variants.length > 1 && (
-							<div>
-								{data.variants.map((variant) => (
-									<button
-										key={variant.name}
-										onClick={() => setSelectedVariant(variant)}
-										className="Product__variant"
-									>
-										<img
-											src={variant.image}
-											alt={variant.name}
-											className="Product__img--thumbnail"
-										/>
-									</button>
-								))}
-							</div>
-						)}
+						<div className="Product__options">
+							<p>{selectedVariant.name}</p>
+							{data.variants.length > 1 && (
+								<div className="Product__variants">
+									{data.variants.map((variant) => (
+										<button
+											key={variant.name}
+											onClick={() => setSelectedVariant(variant)}
+											className={`Product__variant--btn ${
+												selectedVariant.id === variant.id &&
+												"disabled img--disabled"
+											}`}
+											disabled={selectedVariant.id === variant.id}
+										>
+											<img
+												src={variant.image}
+												alt={variant.name}
+												className="Product__img--thumbnail"
+											/>
+										</button>
+									))}
+								</div>
+							)}
+						</div>
 						<button
 							className="btn btn--cart"
 							onClick={() =>
@@ -80,9 +85,9 @@ const Product = ({ addToCart }) => {
 						>
 							Add to cart
 						</button>
-						<p>{data.description}</p>
+						<p className="Product__description">{data.description}</p>
 					</div>
-				</>
+				</div>
 			)}
 		</div>
 	);

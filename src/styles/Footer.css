@@ -5,8 +5,9 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 1em 2rem;
+	padding: 2em 4rem;
 	background-color: hsl(var(--clr-light));
+	font-family: var(--ff-display);
 }
 
 .nav__footer {

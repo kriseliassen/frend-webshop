@@ -30,6 +30,12 @@ const App = () => {
 		});
 	};
 
+	const removeFromCart = (id) => {
+		setCartContent((prev) => {
+			return prev.filter((item) => item.id !== id);
+		});
+	};
+
 	return (
 		<Router>
 			<div className="App">
@@ -41,7 +47,7 @@ const App = () => {
 						element={
 							<Cart
 								cartContent={cartContent}
-								setCartContent={setCartContent}
+								removeFromCart={removeFromCart}
 								itemsInCart={itemsInCart}
 							/>
 						}

@@ -25,14 +25,14 @@
 .Cart__product--subtotal {
 	position: absolute;
 	bottom: 1em;
-	right: 1em;
+	right: 0.5em;
 	font-weight: 700;
 }
 
 .Cart__btn--remove {
 	position: absolute;
-	top: 1em;
-	right: 1em;
+	top: 0.5em;
+	right: -1em;
 	border: none;
 	background: none;
 }
@@ -48,5 +48,6 @@
 .Cart__total {
 	display: flex;
 	justify-content: space-between;
-	font-weight: 900;
+	font-size: var(--fs-500);
+	font-weight: 600;
 }

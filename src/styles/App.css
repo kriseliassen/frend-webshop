@@ -8,11 +8,13 @@
 .container {
 	padding: 0 4rem;
 	flex-grow: 1;
-	padding-bottom: 6rem;
+	padding-bottom: 8rem;
 }
 
 .btn {
-	padding: 0.5em 1em;
+	font-size: var(--fs-400);
+	padding: 1em 2em;
+	font-family: var(--ff-display);
 }
 
 .btn:hover {
@@ -21,5 +23,24 @@
 
 .heading {
 	text-align: center;
+	font-size: var(--fs-700);
 	margin: 0.5em 0;
+	font-family: var(--ff-display);
+}
+
+.subheading {
+	font-size: var(--fs-600);
+	font-weight: 500;
+	font-family: var(--ff-display);
+}
+
+.title {
+	font-family: var(--ff-display);
+}
+
+.message--box {
+	padding: 1em 0;
+}
+.message--text {
+	text-align: center;
 }

@@ -34,7 +34,7 @@ const Home = () => {
 							alt="hero"
 							className="hero__image"
 						/>
-						<button className="btn hero__button">Shop now</button>
+						<h2 className="hero__text">New arrivals</h2>
 					</div>
 					<div className="categories" id="categories">
 						{data.map((category) => (
