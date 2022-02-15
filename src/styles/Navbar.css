@@ -35,5 +35,16 @@
 }
 
 .nav__item--cart {
-	font-size: 2rem;
+	font-size: 2.5rem;
+	position: relative;
+}
+
+.nav__item--badge {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -30%);
+	color: white;
+	font-size: var(--fs-200);
+	font-weight: 200;
 }

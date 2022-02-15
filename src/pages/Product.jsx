@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useQuery } from "react-query";
 import { getProduct } from "../api.js";
+import "../styles/Product.css";
 
 const Product = ({ addToCart }) => {
 	const [selectedVariant, setSelectedVariant] = useState(null);
@@ -48,11 +49,22 @@ const Product = ({ addToCart }) => {
 						{data.variants.length > 1 && (
 							<div>
 								{data.variants.map((variant) => (
-									<div key={variant.name}>{variant.name}</div>
+									<button
+										key={variant.name}
+										onClick={() => setSelectedVariant(variant)}
+										className="Product__variant"
+									>
+										<img
+											src={variant.image}
+											alt={variant.name}
+											className="Product__img--thumbnail"
+										/>
+									</button>
 								))}
 							</div>
 						)}
 						<button
+							className="btn btn--cart"
 							onClick={() =>
 								addToCart({
 									id: data.id,

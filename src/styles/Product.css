@@ -1,0 +1,8 @@
+.Product__variant:hover {
+	cursor: pointer;
+}
+
+.Product__img--thumbnail {
+	width: 50px;
+	object-fit: cover;
+}

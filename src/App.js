@@ -13,16 +13,21 @@ const App = () => {
 
 	const addToCart = (product) => {
 		console.log("added to cart", product);
-		// ADD TO CART-STATE
+		setCartContent((cartContent) => [...cartContent, product]);
 	};
 
 	return (
 		<Router>
 			<div className="App">
-				<Navbar />
+				<Navbar cartItems={cartContent.length} />
 				<Routes>
 					<Route path="/" element={<Home />} />
-					<Route path="/cart" element={<Cart cartContent={cartContent} />} />
+					<Route
+						path="/cart"
+						element={
+							<Cart cartContent={cartContent} setCartContent={setCartContent} />
+						}
+					/>
 					<Route path="/category/:name" element={<Category />} />
 					<Route
 						path="/products/:id"
