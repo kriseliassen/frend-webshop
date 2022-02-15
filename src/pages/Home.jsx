@@ -1,6 +1,7 @@
 import React from "react";
 import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
+import ImageCard from "../components/ImageCard";
 import "../styles/Home.css";
 
 const getCategories = async () => {
@@ -31,24 +32,20 @@ const Home = () => {
 				)
 			)}
 			{!isLoading && !isError && (
-				<div className="categories">
-					{data.map((category) => (
-						<div className="category--card">
-							<Link to={`/category/${category.name}`}>
-								<img
-									className="category--image"
-									src={
-										category.name === "T-shirts"
-											? `${process.env.PUBLIC_URL}/assets/images/tshirts.jpg`
-											: `${process.env.PUBLIC_URL}/assets/images/${category.name}.jpg`
-									}
-									alt={category.name}
-								/>
-								<span className="category--title">{category.name}</span>
-							</Link>
-						</div>
-					))}
-				</div>
+				<>
+					<div className="hero">
+						<img
+							src={`${process.env.PUBLIC_URL}/assets/images/hero.jpg`}
+							alt="hero"
+							className="hero__image"
+						/>
+					</div>
+					<div className="categories">
+						{data.map((category) => (
+							<ImageCard key={category.id} name={category.name} />
+						))}
+					</div>
+				</>
 			)}
 		</div>
 	);

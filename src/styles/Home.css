@@ -1,6 +1,23 @@
+.hero {
+	height: 500px;
+	width: 100vw;
+	position: relative;
+	left: -4rem;
+}
+
+.hero__image {
+	height: 500px;
+	width: 100%;
+	background-position: center;
+	object-fit: cover;
+}
+
 .categories {
 	display: flex;
 	flex-wrap: wrap;
+	gap: 2em;
+	padding: 2em 0;
+	justify-content: center;
 }
 
 .category--card {
