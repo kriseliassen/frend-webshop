@@ -1,0 +1,17 @@
+.ImageCard__card {
+	width: 300px;
+	height: 400px;
+	position: relative;
+}
+
+.ImageCard__img {
+	width: 300px;
+	height: 400px;
+	object-fit: cover;
+}
+
+.ImageCard__title {
+	position: absolute;
+	color: white;
+	bottom: 0;
+}

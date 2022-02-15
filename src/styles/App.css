@@ -10,3 +10,11 @@
 	flex-grow: 1;
 	padding-bottom: 6rem;
 }
+
+.btn {
+	padding: 0.5em 1em;
+}
+
+.btn:hover {
+	cursor: pointer;
+}

@@ -12,7 +12,7 @@ const App = () => {
 	const [cartContent, setCartContent] = useState([]);
 
 	const addToCart = (product) => {
-		console.log("added to cart");
+		console.log("added to cart", product);
 		// ADD TO CART-STATE
 	};
 

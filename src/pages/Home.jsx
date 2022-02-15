@@ -1,13 +1,8 @@
 import React from "react";
 import { useQuery } from "react-query";
-import { Link } from "react-router-dom";
+import { getCategories } from "../api";
 import ImageCard from "../components/ImageCard";
 import "../styles/Home.css";
-
-const getCategories = async () => {
-	const res = await fetch("https://frend-ecom-api.azurewebsites.net/Category");
-	return res.json();
-};
 
 const Home = () => {
 	const { data, isLoading, isError, error } = useQuery(
@@ -39,8 +34,9 @@ const Home = () => {
 							alt="hero"
 							className="hero__image"
 						/>
+						<button className="btn hero__button">Shop now</button>
 					</div>
-					<div className="categories">
+					<div className="categories" id="categories">
 						{data.map((category) => (
 							<ImageCard key={category.id} name={category.name} />
 						))}

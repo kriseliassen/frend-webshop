@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../styles/ImageCard.css";
 
 const ImageCard = ({ name }) => {
 	return (
-		<div className="category--card">
+		<div className="ImageCard__card">
 			<Link to={`/category/${name}`}>
 				<img
-					className="category--image"
+					className="ImageCard__img"
 					src={
 						name === "T-shirts"
 							? `${process.env.PUBLIC_URL}/assets/images/tshirts.jpg`
@@ -14,7 +15,7 @@ const ImageCard = ({ name }) => {
 					}
 					alt={name}
 				/>
-				<span className="category--title">{name}</span>
+				<span className="ImageCard__title">{name}</span>
 			</Link>
 		</div>
 	);

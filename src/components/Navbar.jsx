@@ -42,19 +42,19 @@ const Navbar = () => {
 			<div className="navbar__lower">
 				<ul className="nav nav__categories">
 					<li className="nav__item">
-						<Link to="/category/t-shirts">T-shirts</Link>
+						<Link to="/category/T-shirts">T-shirts</Link>
 					</li>
 					<li className="nav__item">
-						<Link to="/category/hoodies">Hoodies</Link>
+						<Link to="/category/Hoodies">Hoodies</Link>
 					</li>
 					<li className="nav__item">
-						<Link to="/category/outwear">Outwear</Link>
+						<Link to="/category/Outwear">Outwear</Link>
 					</li>
 					<li className="nav__item">
-						<Link to="/category/knitwear">Knitwear</Link>
+						<Link to="/category/Knitwear">Knitwear</Link>
 					</li>
 					<li className="nav__item">
-						<Link to="/category/trousers">Trousers</Link>
+						<Link to="/category/Trousers">Trousers</Link>
 					</li>
 				</ul>
 			</div>
