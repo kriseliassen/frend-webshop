@@ -6,9 +6,9 @@
 }
 
 .container {
-	padding: 0 4rem;
+	padding: 0 2rem;
 	flex-grow: 1;
-	padding-bottom: 8rem;
+	padding-bottom: 10rem;
 }
 
 .btn {
@@ -43,4 +43,12 @@
 }
 .message--text {
 	text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+	.container {
+		padding: 0 4rem;
+		flex-grow: 1;
+		padding-bottom: 8rem;
+	}
 }

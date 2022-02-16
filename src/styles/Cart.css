@@ -1,5 +1,6 @@
 .Cart {
 	display: flex;
+	flex-direction: column;
 	justify-content: space-evenly;
 }
 
@@ -15,7 +16,8 @@
 }
 
 .Cart__image {
-	width: 150px;
+	width: 30%;
+	object-fit: contain;
 }
 
 .Cart__product--details {
@@ -24,15 +26,15 @@
 
 .Cart__product--subtotal {
 	position: absolute;
-	bottom: 1em;
-	right: 0.5em;
+	bottom: 0.5em;
+	right: 0em;
 	font-weight: 700;
 }
 
 .Cart__btn--remove {
 	position: absolute;
-	top: 0.5em;
-	right: -1em;
+	top: 0em;
+	right: -2em;
 	border: none;
 	background: none;
 }
@@ -50,4 +52,24 @@
 	justify-content: space-between;
 	font-size: var(--fs-500);
 	font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
+	.Cart {
+		flex-direction: row;
+	}
+
+	.Cart__image {
+		width: 150px;
+	}
+
+	.Cart__product--subtotal {
+		bottom: 1em;
+		right: 0.5em;
+	}
+
+	.Cart__btn--remove {
+		top: 0.5em;
+		right: -1em;
+	}
 }
