@@ -3,7 +3,6 @@
 ## Description
 
 This is a simple frontend for an imaginary/non-existent webshop.
-![Screenshot of home page](/assets/images/Screenshot.png)
 
 ### Technologies
 
