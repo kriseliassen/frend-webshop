@@ -29,12 +29,12 @@ The links in the footer are also non-functional and are merely an aesthetic choi
 I have chosen a minimalistic design, with the pops of color mainly coming from the product pictures. The design is inspired in part by webshops like [Monki](https://www.monki.com/en_nok/index.html) and [Weekday](https://www.weekday.com/en_nok/index.html).
 
 The images on the home page are from Unsplash:
-[Hero image - Clark Street Mercantile](https://unsplash.com/photos/qnKhZJPKFD8)
-[T-shirt - Sincerely Media](https://unsplash.com/photos/9ShY-Tq70Mc)
-[Hoodie - Logan Weaver](https://unsplash.com/photos/N6BP12FB_XU)
-[Outerwear - Toa Heftiba](https://unsplash.com/@heftiba)
-[Knitwear - Irina Sergeeva](https://unsplash.com/photos/sv9Dc1UkffU)
-[Trousers - Djurdjica Boskovic](https://unsplash.com/photos/3QEb9uH4gqA)
+- [Hero image - Clark Street Mercantile](https://unsplash.com/photos/qnKhZJPKFD8)
+- [T-shirt - Sincerely Media](https://unsplash.com/photos/9ShY-Tq70Mc)
+- [Hoodie - Logan Weaver](https://unsplash.com/photos/N6BP12FB_XU)
+- [Outerwear - Toa Heftiba](https://unsplash.com/@heftiba)
+- [Knitwear - Irina Sergeeva](https://unsplash.com/photos/sv9Dc1UkffU)
+- [Trousers - Djurdjica Boskovic](https://unsplash.com/photos/3QEb9uH4gqA)
 
 The placeholder logo is from [Logo Ipsum](https://logoipsum.com/).
 
