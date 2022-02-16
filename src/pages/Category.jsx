@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useQuery } from "react-query";
+
 import { getCategories, getProducts } from "../api";
 import ProductCard from "../components/ProductCard";
 import "../styles/Category.css";
@@ -9,12 +10,12 @@ const Category = () => {
 	const { name } = useParams();
 
 	const categories = useQuery("categories", getCategories).data;
-	const { data, isLoading, isError, error } = useQuery("products", getProducts);
+	const { data, isLoading, isError } = useQuery("products", getProducts);
 
-	const categoryId = categories?.find((category) => category.name === name)?.id;
+	const categoryId = categories?.find((category) => category.name === name).id;
 
 	const getProductsInCategory = (data) => {
-		return data?.filter((item) => item.categoryId.includes(categoryId));
+		return data.filter((item) => item.categoryId.includes(categoryId));
 	};
 
 	return (
@@ -28,7 +29,7 @@ const Category = () => {
 				isError && (
 					<div className="message--box">
 						<span className="message--text">
-							Oops, there was an error: {error.message}
+							Oops, there was an error loading the page.
 						</span>
 					</div>
 				)

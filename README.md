@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Frend - webshop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+This is a simple frontend for an imaginary/non-existent webshop.
+![Screenshot of home page](/assets/images/Screenshot.png)
 
-In the project directory, you can run:
+### Technologies
 
-### `npm start`
+The products with their respective details, images, and categories come from Frend's own API.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The website is built in React with Create React App, and the data from the API is fetched using React Query. React Router is used to create the dynamic routes for each category and product.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+React Query allows for easy access to the status of the API call, any errors, and the returned data. It also automatically caches the data from each API call. This means that when a call is made for the categories on the product page within a set time, in order to get the relevant category ID, the data is returned immediately from the cache, as that data has already been fetched for the home page.
 
-### `npm test`
+The styling is done in pure CSS, without any additional frameworks.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Functionality
 
-### `npm run build`
+On the website, you have the possibility to browse through categories of clothing or look at one specific product to see its details, any variants, and to add the product to cart.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+When an item is added to cart, it will show up on the cart page with details like its price, quantity, variant, subtotal, and you'll see the total for the content of your cart. Here you can also remove an item from your cart. The cart icon on the top right will also show the number of items currently in your cart.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The button for "Go to checkout" is not functional, and does not go anywhere or do anything, as there is no checkout or payment functionality implemented.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The links in the footer are also non-functional and are merely an aesthetic choice and work as a placeholder.
 
-### `npm run eject`
+### Design
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+I have chosen a minimalistic design, with the pops of color mainly coming from the product pictures. The design is inspired in part by webshops like [Monki](https://www.monki.com/en_nok/index.html) and [Weekday](https://www.weekday.com/en_nok/index.html).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The images on the home page are from Unsplash:
+[Hero image - Clark Street Mercantile](https://unsplash.com/photos/qnKhZJPKFD8)
+[T-shirt - Sincerely Media](https://unsplash.com/photos/9ShY-Tq70Mc)
+[Hoodie - Logan Weaver](https://unsplash.com/photos/N6BP12FB_XU)
+[Outerwear - Toa Heftiba](https://unsplash.com/@heftiba)
+[Knitwear - Irina Sergeeva](https://unsplash.com/photos/sv9Dc1UkffU)
+[Trousers - Djurdjica Boskovic](https://unsplash.com/photos/3QEb9uH4gqA)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The placeholder logo is from [Logo Ipsum](https://logoipsum.com/).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Running the project
 
-## Learn More
+To run this project, install it locally using npm. It will run on localhost:3000 or another available port.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+npm install
+npm start
+```

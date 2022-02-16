@@ -6,9 +6,10 @@ import "../styles/Product.css";
 
 const Product = ({ addToCart }) => {
 	const [selectedVariant, setSelectedVariant] = useState(null);
+	const [confirmationMessage, setConfirmationMessage] = useState(null);
 	const { id } = useParams();
 
-	const { status, data, isLoading, isError, error } = useQuery("product", () =>
+	const { status, data, isLoading, isError } = useQuery("product", () =>
 		getProduct(id)
 	);
 
@@ -17,6 +18,23 @@ const Product = ({ addToCart }) => {
 			setSelectedVariant(data.variants[0]);
 		}
 	}, [status, data]);
+
+	const handleAddToCart = () => {
+		addToCart({
+			id: data.id,
+			name: data.name,
+			price: data.price,
+			variant: {
+				id: selectedVariant.id,
+				name: selectedVariant.name,
+				image: selectedVariant.image,
+			},
+		});
+		setConfirmationMessage("Item added to cart!");
+		setTimeout(() => {
+			setConfirmationMessage(null);
+		}, 1000);
+	};
 
 	return (
 		<div className="container">
@@ -29,7 +47,7 @@ const Product = ({ addToCart }) => {
 				isError && (
 					<div className="message--box">
 						<span className="message--text">
-							Oops, there was an error: {error.message}
+							Oops, there was an error loading the page.
 						</span>
 					</div>
 				)
@@ -50,7 +68,7 @@ const Product = ({ addToCart }) => {
 								<div className="Product__variants">
 									{data.variants.map((variant) => (
 										<button
-											key={variant.name}
+											key={variant.id}
 											onClick={() => setSelectedVariant(variant)}
 											className={`Product__variant--btn ${
 												selectedVariant.id === variant.id &&
@@ -68,23 +86,12 @@ const Product = ({ addToCart }) => {
 								</div>
 							)}
 						</div>
-						<button
-							className="btn btn--cart"
-							onClick={() =>
-								addToCart({
-									id: data.id,
-									name: data.name,
-									price: data.price,
-									variant: {
-										id: selectedVariant.id,
-										name: selectedVariant.name,
-										image: selectedVariant.image,
-									},
-								})
-							}
-						>
+						<button className="btn btn--cart" onClick={handleAddToCart}>
 							Add to cart
 						</button>
+						{confirmationMessage && (
+							<p className="Product__confirmation">{confirmationMessage}</p>
+						)}
 						<p className="Product__description">{data.description}</p>
 					</div>
 				</div>

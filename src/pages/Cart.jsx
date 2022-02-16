@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import "../styles/Cart.css";
 
-const Cart = ({ cartContent, removeFromCart, itemsInCart }) => {
+const Cart = ({ cartContent, removeFromCart, numberOfItemsInCart }) => {
 	const totalSum = cartContent.reduce(
 		(acc, item) => acc + item.quantity * item.price,
 		0
@@ -13,7 +14,7 @@ const Cart = ({ cartContent, removeFromCart, itemsInCart }) => {
 				<div className="Cart__content">
 					{cartContent.length > 0 &&
 						cartContent.map((item) => (
-							<div key={item.id} className="Cart__product">
+							<div key={item.variant.id} className="Cart__product">
 								<img
 									src={item.variant.image}
 									alt={item.name + item.variant.name}
@@ -39,14 +40,17 @@ const Cart = ({ cartContent, removeFromCart, itemsInCart }) => {
 					{cartContent.length === 0 && (
 						<div className="message--box">
 							<p className="message--text">Your cart is empty.</p>
+							<Link to="/" className="message--link">
+								Go shopping!
+							</Link>{" "}
 						</div>
 					)}
 				</div>
 				<div className="Cart__summary">
 					<h2 className="subheading">Cart total</h2>
 					<p>
-						You have {itemsInCart} {itemsInCart === 1 ? "item" : "items"} in
-						your cart
+						You have {numberOfItemsInCart}{" "}
+						{numberOfItemsInCart === 1 ? "item" : "items"} in your cart
 					</p>
 					<p className="Cart__total">
 						<span>TOTAL</span>

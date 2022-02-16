@@ -5,10 +5,7 @@ import ImageCard from "../components/ImageCard";
 import "../styles/Home.css";
 
 const Home = () => {
-	const { data, isLoading, isError, error } = useQuery(
-		"categories",
-		getCategories
-	);
+	const { data, isLoading, isError } = useQuery("categories", getCategories);
 
 	return (
 		<div className="container">
@@ -21,7 +18,7 @@ const Home = () => {
 				isError && (
 					<div className="message--box">
 						<span className="message--text">
-							Oops, there was an error: {error.message}
+							Oops, there was an error loading the page.
 						</span>
 					</div>
 				)
@@ -36,7 +33,7 @@ const Home = () => {
 						/>
 						<h2 className="hero__text">New arrivals</h2>
 					</div>
-					<div className="categories" id="categories">
+					<div className="categories">
 						{data.map((category) => (
 							<ImageCard key={category.id} name={category.name} />
 						))}

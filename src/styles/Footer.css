@@ -23,6 +23,7 @@
 		padding: 2em 4rem;
 		flex-direction: row;
 	}
+
 	.nav.nav__footer {
 		flex-direction: row;
 		gap: 4em;

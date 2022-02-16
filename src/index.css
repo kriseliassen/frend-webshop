@@ -1,10 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-/* ------------------------ */
-/* Custom properties        */
-/* ------------------------ */
-
 :root {
 	--clr-dark: 129, 41%, 16%;
 	--clr-light: 106, 33%, 90%;
@@ -23,10 +19,6 @@
 	--ff-display: "Syne", sans-serif;
 }
 
-/* ------------------------ */
-/* Reset                    */
-/* ------------------------ */
-
 *,
 *::before,
 *::after {
@@ -38,7 +30,7 @@
 body {
 	font-family: var(--ff-sans-normal);
 	font-size: var(--fs-400);
-	line-height: 1.5;
+	line-height: 1.6;
 }
 
 img {
@@ -46,10 +38,7 @@ img {
 	display: block;
 }
 
-input,
-button,
-textarea,
-select {
+button {
 	font-family: var(--ff-display);
 }
 

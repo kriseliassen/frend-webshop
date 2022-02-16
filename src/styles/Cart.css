@@ -9,7 +9,7 @@
 }
 
 .Cart__product {
-	border-bottom: 1px solid hsl(var(--clr-light) / 0.5);
+	border-bottom: 1px solid hsl(var(--clr-light));
 	display: flex;
 	position: relative;
 	padding: 1em 0;

@@ -3,7 +3,7 @@ import "../styles/ProductCard.css";
 
 const ProductCard = ({ product }) => {
 	return (
-		<div className="ProductCard__card">
+		<div>
 			<Link to={`/products/${product.id}`}>
 				<img
 					src={product.variants[0].image}
@@ -14,8 +14,8 @@ const ProductCard = ({ product }) => {
 			<Link to={`/products/${product.id}`}>
 				<h2 className="title">{product.name}</h2>
 			</Link>
+			<p>{product.price} NOK</p>
 			{product.variants.length > 1 && <p>{product.variants.length} colors</p>}
-			<p className="ProductCart__price">{product.price} NOK</p>
 		</div>
 	);
 };

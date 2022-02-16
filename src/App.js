@@ -1,17 +1,22 @@
+import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import "./styles/App.css";
+
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import Category from "./pages/Category";
-import Home from "./pages/Home";
 import Product from "./pages/Product";
-import { useState } from "react";
 
 const App = () => {
 	const [cartContent, setCartContent] = useState([]);
 
-	const itemsInCart = cartContent.reduce((acc, item) => acc + item.quantity, 0);
+	const numberOfItemsInCart = cartContent.reduce(
+		(acc, item) => acc + item.quantity,
+		0
+	);
 
 	const addToCart = (product) => {
 		setCartContent((prev) => {
@@ -39,7 +44,7 @@ const App = () => {
 	return (
 		<Router>
 			<div className="App">
-				<Navbar itemsInCart={itemsInCart} />
+				<Navbar numberOfItemsInCart={numberOfItemsInCart} />
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route
@@ -48,7 +53,7 @@ const App = () => {
 							<Cart
 								cartContent={cartContent}
 								removeFromCart={removeFromCart}
-								itemsInCart={itemsInCart}
+								numberOfItemsInCart={numberOfItemsInCart}
 							/>
 						}
 					/>
