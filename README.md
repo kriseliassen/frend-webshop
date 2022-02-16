@@ -40,7 +40,7 @@ The placeholder logo is from [Logo Ipsum](https://logoipsum.com/).
 
 ## Running the project
 
-To run this project, install it locally using npm. It will run on localhost:3000 or another available port.
+To run this project, install it locally using npm.
 
 ```
 npm install
