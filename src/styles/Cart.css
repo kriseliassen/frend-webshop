@@ -37,6 +37,7 @@
 	right: -2em;
 	border: none;
 	background: none;
+	color: black;
 }
 
 .Cart__summary {
@@ -69,7 +70,7 @@
 	}
 
 	.Cart__btn--remove {
-		top: 0.5em;
+		top: 0em;
 		right: -1em;
 	}
 }

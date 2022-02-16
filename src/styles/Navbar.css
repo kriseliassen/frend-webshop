@@ -3,7 +3,7 @@
 	align-items: center;
 	justify-content: space-between;
 	padding: 1em 2rem;
-	border-bottom: 1px solid hsl(var(--clr-light) / 0.5);
+	border-bottom: 1px solid hsl(var(--clr-dark), 0.1);
 }
 
 .navbar__lower {
@@ -11,7 +11,7 @@
 	display: flex;
 	justify-content: center;
 	padding: 0.5em 2rem;
-	border-bottom: 1px solid hsl(var(--clr-light) / 0.5);
+	border-bottom: 1px solid hsl(var(--clr-dark), 0.1);
 	font-family: var(--ff-display);
 }
 
@@ -39,16 +39,22 @@
 	align-items: center;
 }
 
+.nav__item:hover,
+.nav__item:focus {
+	opacity: 0.7;
+}
+
 .nav__item--cart {
 	font-size: 3rem;
 	position: relative;
+	color: hsl(var(--clr-dark));
 }
 
 .nav__item--badge {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -40%);
+	transform: translate(-50%, -35%);
 	color: white;
 	font-size: var(--fs-400);
 	font-weight: 200;

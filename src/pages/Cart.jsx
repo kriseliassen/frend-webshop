@@ -44,7 +44,10 @@ const Cart = ({ cartContent, removeFromCart, itemsInCart }) => {
 				</div>
 				<div className="Cart__summary">
 					<h2 className="subheading">Cart total</h2>
-					<p>You have {itemsInCart} items in your cart</p>
+					<p>
+						You have {itemsInCart} {itemsInCart === 1 ? "item" : "items"} in
+						your cart
+					</p>
 					<p className="Cart__total">
 						<span>TOTAL</span>
 						{totalSum} NOK

@@ -9,16 +9,28 @@
 	padding: 0 2rem;
 	flex-grow: 1;
 	padding-bottom: 10rem;
+	display: flex;
+	flex-direction: column;
 }
 
 .btn {
 	font-size: var(--fs-400);
 	padding: 1em 2em;
 	font-family: var(--ff-display);
+	background: hsl(var(--clr-dark));
+	color: white;
+	outline: none;
+	border: none;
+	transition: 0.2s all;
 }
 
 .btn:hover {
 	cursor: pointer;
+	opacity: 0.8;
+}
+
+.btn:active {
+	transform: scale(0.97);
 }
 
 .heading {
@@ -40,6 +52,7 @@
 
 .message--box {
 	padding: 1em 0;
+	align-self: center;
 }
 .message--text {
 	text-align: center;

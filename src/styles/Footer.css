@@ -8,7 +8,8 @@
 	align-items: center;
 	gap: 1em;
 	padding: 1.5em 3rem;
-	background-color: hsl(var(--clr-light));
+	background: hsl(var(--clr-light));
+	color: hsl(var(--clr-dark));
 	font-family: var(--ff-display);
 }
 

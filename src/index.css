@@ -6,9 +6,9 @@
 /* ------------------------ */
 
 :root {
-	--clr-dark: 230 35% 7%;
-	--clr-light: 231 77% 90%;
-	--clr-white: 0 0% 100%;
+	--clr-dark: 129, 41%, 16%;
+	--clr-light: 106, 33%, 90%;
+	--clr-neutral: 51, 91%, 95%;
 
 	--fs-900: 9.375rem;
 	--fs-800: 6.25rem;
@@ -35,24 +35,13 @@
 	padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-	font-weight: 400;
-}
-
 body {
 	font-family: var(--ff-sans-normal);
 	font-size: var(--fs-400);
 	line-height: 1.5;
 }
 
-img,
-picture {
+img {
 	max-width: 100%;
 	display: block;
 }
