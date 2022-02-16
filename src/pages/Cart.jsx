@@ -31,7 +31,7 @@ const Cart = ({ cartContent, removeFromCart, numberOfItemsInCart }) => {
 								</p>
 								<button
 									className="btn Cart__btn--remove"
-									onClick={() => removeFromCart(item.id)}
+									onClick={() => removeFromCart(item.variant.id)}
 								>
 									X
 								</button>

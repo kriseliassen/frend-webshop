@@ -37,7 +37,7 @@ const App = () => {
 
 	const removeFromCart = (id) => {
 		setCartContent((prev) => {
-			return prev.filter((item) => item.id !== id);
+			return prev.filter((item) => item.variant.id !== id);
 		});
 	};
 
